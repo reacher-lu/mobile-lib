@@ -11,7 +11,7 @@
 
 - 例如：不删除任何模块，打包后为84K。删除  "ajax", "deprecated", "sizzle"后，打包后的文件体积减少到了58k
 
-- 打开jquery API：(http://api.jquery.com/)[http://api.jquery.com/]  在左侧的模块中，以下几个是支持移除的
+- 打开jquery API：[http://api.jquery.com/](http://api.jquery.com/) 在左侧的模块中，以下几个是支持移除的
 
   + `Ajax`
 
