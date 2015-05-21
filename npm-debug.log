@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.0.0
+3 info using node@v0.11.14
+4 warn package.json mobiletest@0.0.0 No README data
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/luqiang/Desktop/github/mobilelib',
+6 verbose install   [ 'grunt-bower-install', 'grunt-jquery-builder' ] ]
+7 info preinstall mobiletest@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt-bower-install@~0.7.0 /Users/luqiang/Desktop/github/mobilelib
+10 verbose cache add [ 'grunt-jquery-builder@https://github.com/gustavohenke/grunt-jquery-builder',
+10 verbose cache add   null ]
+11 verbose cache add spec="grunt-jquery-builder@https://github.com/gustavohenke/grunt-jquery-builder" args=["grunt-jquery-builder@https://github.com/gustavohenke/grunt-jquery-builder",null]
+12 verbose parsed spec { raw: 'grunt-jquery-builder@https://github.com/gustavohenke/grunt-jquery-builder',
+12 verbose parsed spec   scope: null,
+12 verbose parsed spec   name: 'grunt-jquery-builder',
+12 verbose parsed spec   rawSpec: 'https://github.com/gustavohenke/grunt-jquery-builder',
+12 verbose parsed spec   spec: 'https://github.com/gustavohenke/grunt-jquery-builder',
+12 verbose parsed spec   type: 'remote' }
+13 verbose parsed spec { raw: 'grunt-jquery-builder@https://github.com/gustavohenke/grunt-jquery-builder',
+13 verbose parsed spec   scope: null,
+13 verbose parsed spec   name: 'grunt-jquery-builder',
+13 verbose parsed spec   rawSpec: 'https://github.com/gustavohenke/grunt-jquery-builder',
+13 verbose parsed spec   spec: 'https://github.com/gustavohenke/grunt-jquery-builder',
+13 verbose parsed spec   type: 'remote' }
+14 silly lockFile 5cb8074e-ustavohenke-grunt-jquery-builder https://github.com/gustavohenke/grunt-jquery-builder
+15 verbose lock https://github.com/gustavohenke/grunt-jquery-builder /Users/luqiang/.npm/5cb8074e-ustavohenke-grunt-jquery-builder.lock
+16 verbose addRemoteTarball [ 'https://github.com/gustavohenke/grunt-jquery-builder', null ]
+17 info retry fetch attempt 1 at 09:53:40
+18 info attempt registry request try #1 at 09:53:40
+19 http fetch GET https://github.com/gustavohenke/grunt-jquery-builder
+20 verbose request id 024565d8c81feb3b
+21 http fetch 406 https://github.com/gustavohenke/grunt-jquery-builder
+22 error fetch failed https://github.com/gustavohenke/grunt-jquery-builder
+23 info retry will retry, error on last attempt: Error: fetch failed with status code 406
+24 info retry fetch attempt 2 at 09:53:51
+25 info attempt registry request try #1 at 09:53:51
+26 http fetch GET https://github.com/gustavohenke/grunt-jquery-builder
+27 http fetch 406 https://github.com/gustavohenke/grunt-jquery-builder
+28 error fetch failed https://github.com/gustavohenke/grunt-jquery-builder
+29 info retry will retry, error on last attempt: Error: fetch failed with status code 406
+30 info retry fetch attempt 3 at 09:54:52
+31 info attempt registry request try #1 at 09:54:52
+32 http fetch GET https://github.com/gustavohenke/grunt-jquery-builder
+33 http fetch 406 https://github.com/gustavohenke/grunt-jquery-builder
+34 error fetch failed https://github.com/gustavohenke/grunt-jquery-builder
+35 silly lockFile 5cb8074e-ustavohenke-grunt-jquery-builder https://github.com/gustavohenke/grunt-jquery-builder
+36 silly lockFile 5cb8074e-ustavohenke-grunt-jquery-builder https://github.com/gustavohenke/grunt-jquery-builder
+37 verbose stack Error: fetch failed with status code 406
+37 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/fetch.js:53:14)
+37 verbose stack     at Request.emit (events.js:107:17)
+37 verbose stack     at Request.onResponse (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1085:10)
+37 verbose stack     at ClientRequest.g (events.js:199:16)
+37 verbose stack     at ClientRequest.emit (events.js:107:17)
+37 verbose stack     at HTTPParser.parserOnIncomingClient (_http_client.js:418:21)
+37 verbose stack     at HTTPParser.parserOnHeadersComplete (_http_common.js:111:23)
+37 verbose stack     at TLSSocket.socketOnData (_http_client.js:309:20)
+37 verbose stack     at TLSSocket.emit (events.js:107:17)
+37 verbose stack     at readableAddChunk (_stream_readable.js:162:16)
+38 verbose cwd /Users/luqiang/Desktop/github/mobilelib
+39 error Darwin 14.0.0
+40 error argv "node" "/usr/local/bin/npm" "install"
+41 error node v0.11.14
+42 error npm  v2.0.0
+43 error fetch failed with status code 406
+44 error If you need help, you may report this error at:
+44 error     <http://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]

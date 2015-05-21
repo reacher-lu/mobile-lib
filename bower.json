@@ -1,0 +1,23 @@
+{
+  "name": "mobilelibs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/reacher-lu/mobile-lib",
+  "authors": [
+    "reacher"
+  ],
+  "description": "test mobile libs performance && size",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "madrobby/zepto",
+    "jquery": "~2.1.0",
+    "jquip":"https://github.com/reacher-lu/jquip",
+    "sprint":"https://github.com/bendc/sprint"
+  }
+}

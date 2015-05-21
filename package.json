@@ -1,0 +1,23 @@
+{
+  "name": "mobiletest",
+  "version": "0.0.0",
+  "description": "test moblie init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reacher-lu/mobile-lib.git"
+  },
+  "author": "reacher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reacher-lu/mobile-lib/issues"
+  },
+  "homepage": "https://github.com/reacher-lu/mobile-lib",
+  "devDependencies": {
+    "grunt-bower-install": "~0.7.0",
+    "grunt-jquery-builder":"https://github.com/gustavohenke/grunt-jquery-builder"
+  }
+}
