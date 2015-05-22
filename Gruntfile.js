@@ -5,7 +5,6 @@ module.exports = function (grunt) {
     jquery: {
       dist: {
         versions: {
-          // Remove everything we don't need from 2.x versions
           "2.0.3": [ "ajax", "deprecated", "sizzle" ,"effects"]
         },
         options: {

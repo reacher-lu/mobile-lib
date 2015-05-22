@@ -7,6 +7,12 @@
 
 ## detail
 
+
+### jquery
+
+最新版jquery
+
+
 ### jquery-build
 
 - 在gruntfile中增加要删除的模块，进入到目录输入grunt，文件会自动打包到lib文件夹，可使用 jquery-build.html 调试&查看效果
@@ -31,6 +37,18 @@
 
 - 可以看一下对应的方法，移除任何一个模块，这个模块里面对应的所有方法将不再可用
 
+
+### zepto
+
+- github [https://github.com/madrobby/zepto](https://github.com/madrobby/zepto)
+
+- 官网 [http://zeptojs.com/](http://zeptojs.com/)
+
+- zepto builder [http://github.e-sites.nl/zeptobuilder/](http://github.e-sites.nl/zeptobuilder/)
+
+- zepto默认构建的库大小为24k（以前好像是18还是多少）
+
+<img src="images/zepto.png"/>
 
 
 
