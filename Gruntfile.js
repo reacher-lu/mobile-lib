@@ -6,7 +6,7 @@ module.exports = function (grunt) {
       dist: {
         versions: {
           // Remove everything we don't need from 2.x versions
-          "2.0.3": [ "ajax", "deprecated", "sizzle" ]
+          "2.0.3": [ "ajax", "deprecated", "sizzle" ,"effects"]
         },
         options: {
           prefix: "jquery-",
@@ -14,10 +14,21 @@ module.exports = function (grunt) {
         },
         output: "lib"
       }
+    },
+    concat: {
+      jqueryBuild: {
+        src: ['lib/jquery-2.0.3.js','lib/time.js'],
+        dest: 'lib/jquery.builder.js'
+      },
+      jquery: {
+        src: ['bower_components/jquery/dist/jquery.min.js','lib/time.js'],
+        dest: 'bower_components/jquery/dist/jquery.min.js'
+      }
     }
   });
 
   grunt.loadNpmTasks("grunt-jquery-builder");
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask("default", ["jquery"]);
+  grunt.registerTask("default", ["jquery","concat:jqueryBuild","concat:jquery"]);
 };

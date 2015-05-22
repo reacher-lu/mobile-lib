@@ -18,6 +18,7 @@
   "homepage": "https://github.com/reacher-lu/mobile-lib",
   "devDependencies": {
     "grunt-bower-install": "~0.7.0",
-    "grunt-jquery-builder":"gustavohenke/grunt-jquery-builder"
+    "grunt-jquery-builder":"gustavohenke/grunt-jquery-builder",
+    "grunt-contrib-concat": "~0.3.0"
   }
 }
