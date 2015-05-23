@@ -22,6 +22,10 @@ module.exports = function (grunt) {
       jquery: {
         src: ['bower_components/jquery/dist/jquery.min.js','lib/time.js'],
         dest: 'bower_components/jquery/dist/jquery.min.js'
+      },
+      zepto: {
+        src: ['bower_components/zepto/dist/zepto.min.js','lib/time.js'],
+        dest: 'lib/zepto.min.js'
       }
     }
   });
@@ -29,5 +33,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-jquery-builder");
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask("default", ["jquery","concat:jqueryBuild","concat:jquery"]);
+  grunt.registerTask("default", ["jquery","concat"]);
 };

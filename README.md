@@ -48,7 +48,23 @@
 
 - zepto默认构建的库大小为24k（以前好像是18还是多少）
 
-<img src="images/zepto.png"/>
+<img src="images/zepto.png" width="212" height="104" />
+
+- 默认安装以下几个模块
+
+  + `zepto`
+
+  + `event`
+
+  + `ajax`
+
+  + `form`
+
+  + `ie`
+
+- 执行 MODULES="zepto event ajax form iedetect fx fx_methods assets data callbacks deferred selector stack ios3" npm run-script dist 安装全部模块（看了一下，基本上都会用到，touch，gesture目前暂时需求，可以先移除），压缩前79.5k，压缩后为35k
+
+<img src="images/zepto.diy.png" width="546" height="115" />
 
 
 
