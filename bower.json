@@ -17,7 +17,9 @@
   "dependencies": {
     "zepto": "madrobby/zepto",
     "jquery": "~2.1.0",
-    "jquip":"https://github.com/reacher-lu/jquip",
-    "sprint":"https://github.com/bendc/sprint"
+    "jquip":"mythz/jquip",
+    "sprint":"bendc/sprint",
+    "modulex":"1.6.2",
+    "modulex-anim":"1.0.2"
   }
 }

@@ -19,6 +19,7 @@
   "devDependencies": {
     "grunt-bower-install": "~0.7.0",
     "grunt-jquery-builder":"gustavohenke/grunt-jquery-builder",
-    "grunt-contrib-concat": "~0.3.0"
+    "grunt-contrib-concat": "~0.3.0",
+    "aggregate-bower": "^1.0.9"
   }
 }
