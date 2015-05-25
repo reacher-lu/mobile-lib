@@ -8,7 +8,7 @@
 
 ## include
 
-- 包含以下几个库
+- 包含以下7个库
   
   + jquery
   
@@ -29,18 +29,28 @@
 
 ## detail
 
-- 运行 python -m SimpleHTTPServer 起一个本地服务，手机访问该页面，页面将自动刷新10次，计算出脚本加载与执行的平均值。
+1. 执行 grunt，构建出需要的文件
 
-- 修改time.js的阈值以及setTimeout时间，可进行更多次加载，取的更精确的结果
+1. 运行 python -m SimpleHTTPServer 起一个本地服务，手淘或其他浏览器访问该页面，页面将自动刷新10次，计算出脚本加载与执行的平均值。
+
+1. 修改time.js的阈值以及setTimeout时间，可进行更多次加载，取的更精确的结果
+
+
+
+***
+
 
 
 #### jquery
 
 jquery v2.1.4
 
-- 本地执行时间约为44-70ms
 
-- 手机端执行时间约为100~500ms,最高出现过1.3s
+- 手机端wifi下30次加载&执行时间
+  
+  + 首次耗时 111ms
+
+  + 平均耗时 71ms
 
 
 
@@ -74,10 +84,12 @@ jquery v2.1.4
 
 - 移除任何一个模块，这个模块里面对应的所有方法将不再可用
 
-- 本地执行时间约为24-30ms
 
-- 手机端执行时间约为100~500ms,最高出现过1.3s
+- 手机端wifi下30次加载&执行时间
+  
+  + 首次耗时 79ms
 
+  + 平均耗时 55ms
 
 
 
@@ -94,7 +106,7 @@ jquery v2.1.4
 
 - zepto builder [http://github.e-sites.nl/zeptobuilder/](http://github.e-sites.nl/zeptobuilder/)
 
-- zepto默认构建的库大小为24k（以前好像是18还是多少）
+- zepto默认构建的库大小为24k（以前的版本好像是18左右）
 
 <img src="images/zepto.png" width="212" height="104" />
 
@@ -114,8 +126,14 @@ jquery v2.1.4
 
 <img src="images/zepto.diy.png" width="546" height="115" />
 
-- 本地执行时间约为16-17ms
 
+- 手机端wifi下30次加载&执行时间
+  
+  + 首次耗时 97ms(24k看来foundation观望)
+
+  + 平均耗时 38ms
+
+  
 
 
 ***
@@ -142,8 +160,14 @@ jquery v2.1.4
 
 - 以上几个模块压缩版为32k
 
-- 本地执行时间约为10-15ms
 
+- 手机端wifi下30次加载&执行时间
+  
+  + 首次耗时 69ms
+
+  + 平均耗时 35ms
+
+  
 
 
 ***
@@ -154,16 +178,21 @@ jquery v2.1.4
 
 - github [https://github.com/bendc/sprint](https://github.com/bendc/sprint)
 
-- sprint提供常用的dom操作方法，体积非常小，压缩后的版本仅有17k，而且以官方提供的测试结果看，部分方法执行速度比jquery快，但是功能上有短板，如果替换为sprint，很多方法需要自行实现
+- sprint提供常用的dom操作方法，体积非常小，压缩后的版本仅有17k，而且以官方提供的测试结果看，部分方法执行速度比jquery快，但是功能上有短板，如果替换为sprint，很多方法需要自行实现或另行选择框架
 
 - 官网提供的完整压缩版为17k
 
-- 本地执行时间约为5~8ms
 
+- 手机端wifi下30次加载&执行时间
+  
+  + 首次耗时 41ms
+
+  + 平均耗时 34ms
+
+  
 
 
 ***
-
 
 
 
@@ -183,8 +212,14 @@ jquery v2.1.4
 
   + mini-all.js(34k)
 
-- 以mini-min为例，本地执行时间6-7ms
 
+- 手机端wifi下30次加载&执行时间
+  
+  + 首次耗时 50ms
+
+  + 平均耗时 27ms
+
+  
 
 ***
 
@@ -218,10 +253,35 @@ jquery v2.1.4
 <img src="images/kissy.png" width="433" height="330" />
 
 
+- 手机端wifi下30次加载&执行时间
+  
+  + 首次耗时 81ms
+
+  + 平均耗时 57ms
+
+  
+
 
 
 
 ## 小结
+
+1. 手机端wifi下30次加载&执行时间统计如下
+<table>
+  <tr>
+    <th>类库</th>
+    <th>大小</th>
+    <th>首次耗时</th>
+    <th>平均耗时</th>
+  </tr>
+<tr>
+  <td>jquery</td>
+  <td>85k</td>
+  <td>111ms</td>
+  <td>71ms</td>
+</tr>
+</table>
+
 
 1. 因为项目目前主要是重构，考虑到重构工作量以及jquery与kissy语法上的区别，还是用jquery系的类库替换jquery比较方便
 

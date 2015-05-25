@@ -21,7 +21,7 @@ module.exports = function (grunt) {
       },
       jquery: {
         src: ['bower_components/jquery/dist/jquery.min.js','lib/time.js'],
-        dest: 'bower_components/jquery/dist/jquery.min.js'
+        dest: 'lib/jquery.min.js'
       },
       zepto: {
         src: ['bower_components/zepto/dist/zepto.min.js','lib/time.js'],
@@ -51,6 +51,13 @@ module.exports = function (grunt) {
           'lib/time.js'
         ],
         dest: 'lib/mini-min.js'
+      },
+      seed: {
+        src: [
+          'lib/seed.min.js',
+          'lib/time.js'
+        ],
+        dest: 'lib/seed.min.js'
       }
     }
   });
