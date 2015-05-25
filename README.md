@@ -2,7 +2,7 @@
 
 罗列一下备选的移动web开发类库，简单对比他们的加载，初始化时间
 
-在实际应用中，去纠结某一个方法执行一万遍，不同类库性能上几毫秒的差异，意义不是特别大，目前美店的优化的方向还是减小类库体积，初始化时间，所以这里并没有参考网上的测试报告，感兴趣的可以点[这里](http://jsperf.com/)自行测试
+在实际应用中，去纠结某一个方法执行一万遍，不同类库性能上几毫秒的差异，意义不是特别大，目前美店的优化的方向还是减小类库体积，初始化时间。所以这里并没有参考网上的测试报告，感兴趣的可以点[这里](http://jsperf.com/)自行测试
 
 
 
@@ -12,9 +12,9 @@
   
   + jquery
   
-  + jquery-build
+  + jquery(build)
 
-  + zepto-build
+  + zepto(build)
 
   + jquip
 
@@ -90,14 +90,30 @@ jquery v2.1.4
 
 <img src="images/zepto.diy.png" width="546" height="115" />
 
+- 本地执行时间约为16-17ms
+
+
 
 
 ### jquip
 
 - github [https://github.com/mythz/jquip](https://github.com/mythz/jquip)
 
-- 非常小巧的jquery构建版本
+- 非常小巧的jquery构建版本，号称实现了jquery 90%的功能，以下是它的组成
 
+  + jquip.js (6.6k，最新版19k)
+  
+  + jquip.events.js (1k，最新版3k)
+  
+  + jquip.docready.js (.5k，最新版1k)
+  
+  + jquip.css.js (2.5k，最新版6k)
+  
+  + jquip.ajax.js (1k，最新版3k)
+
+- 除此之外还有一些可选的选择器引擎，后期如果考虑自己实现jquery，可以借鉴
+
+- 以上几个模块压缩版为32k
 
 
 
@@ -106,6 +122,10 @@ jquery v2.1.4
 - github [https://github.com/bendc/sprint](https://github.com/bendc/sprint)
 
 - sprint提供常用的dom操作方法，体积非常小，压缩后的版本仅有17k，而且以官方提供的测试结果看，部分方法执行速度比jquery快，但是功能上有短板，如果替换为sprint，很多方法需要自行实现
+
+- 官网提供的完整压缩版为17k
+
+
 
 
 ### kissy mini
@@ -135,9 +155,9 @@ jquery v2.1.4
 
 ## 小结
 
-- 因为项目目前主要是重构，考虑到重构工作量以及jquery与kissy语法上的区别，还是用jquery系的类库替换jquery比较方便
+1. 因为项目目前主要是重构，考虑到重构工作量以及jquery与kissy语法上的区别，还是用jquery系的类库替换jquery比较方便
 
-- 分析几个大型类库的API，虽然支持模块分解，但每个模块里面都有大量我们不会用到的代码，后期要将代码缩减到极致，最好的办法还是我们手动去写，网上也有很多实现的文章，如：
+1. 分析几个大型类库的API，虽然支持模块分解，但每个模块里面都有大量我们不会用到的代码，后期要将代码缩减到极致，最好的办法还是我们手动去写，网上也有很多实现的文章，如：
 
 - [如何做到 jQuery-free?](http://www.ruanyifeng.com/blog/2013/05/jquery-free.html)
 

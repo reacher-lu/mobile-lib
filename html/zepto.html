@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>grunt-jquery-builder</title>
+    <title>zepto</title>
 </head>
 
 <body>
@@ -10,11 +10,13 @@
 <script>
 window.timing = +new Date();
 </script>
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../lib/zepto.min.js"></script>
 <script>
+  (function($){
     $(document).ready(function(){
-        console.log(Zepto);
+      console.log(Zepto);
     });
+  })(Zepto);
 </script>
 </body>
 </html>

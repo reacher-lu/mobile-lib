@@ -26,9 +26,28 @@ module.exports = function (grunt) {
       zepto: {
         src: ['bower_components/zepto/dist/zepto.min.js','lib/time.js'],
         dest: 'lib/zepto.min.js'
+      },
+      jquip: {
+        src: [
+          'bower_components/jquip/dist/jquip.min.js',
+          'bower_components/jquip/dist/jquip.events.min.js',
+          'bower_components/jquip/dist/jquip.docready.min.js',
+          'bower_components/jquip/dist/jquip.css.min.js',
+          'bower_components/jquip/dist/jquip.ajax.min.js',
+          'lib/time.js'
+        ],
+        dest: 'lib/jquip.min.js'
+      },
+      sprint: {
+        src: [
+          'bower_components/sprint/sprint.min.js',
+          'lib/time.js'
+        ],
+        dest: 'lib/sprint.min.js'
       }
     }
   });
+
 
   grunt.loadNpmTasks("grunt-jquery-builder");
   grunt.loadNpmTasks('grunt-contrib-concat');

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>grunt-jquery-builder</title>
+    <title>jquip</title>
 </head>
 
 <body>
@@ -10,12 +10,13 @@
 <script>
 window.timing = +new Date();
 </script>
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../lib/jquip.min.js"></script>
 <script>
     $(document).ready(function(){
         console.log(jQuery);
-        console.log(jQuery.ajax);
-        console.log(jQuery.ready);
+        console.log($);
+        console.log($.ajax);
+        console.log($.on);
     });
 </script>
 </body>
