@@ -4,6 +4,60 @@
 
 在实际应用中，去纠结某一个方法执行一万遍，不同类库性能上几毫秒的差异，意义不是特别大，目前美店的优化的方向还是减小类库体积，初始化时间。所以这里并没有参考网上的测试报告，感兴趣的可以点[这里](http://jsperf.com/)自行测试
 
+- 自行测试结果如下
+
+1. 手机端wifi下30次加载&执行时间统计如下
+<table>
+  <tr>
+    <th>类库</th>
+    <th>大小</th>
+    <th>首次耗时</th>
+    <th>平均耗时</th>
+  </tr>
+<tr>
+  <td>jquery</td>
+  <td>85k</td>
+  <td>111ms</td>
+  <td>71ms</td>
+</tr>
+<tr>
+  <td>jquery-build</td>
+  <td>50k</td>
+  <td>79ms</td>
+  <td>55ms</td>
+</tr>
+<tr>
+  <td>zepto</td>
+  <td>24k</td>
+  <td>97ms</td>
+  <td>38ms</td>
+</tr>
+<tr>
+  <td>jquip</td>
+  <td>32k</td>
+  <td>69ms</td>
+  <td>35ms</td>
+</tr>
+<tr>
+  <td>sprint</td>
+  <td>17k</td>
+  <td>41ms</td>
+  <td>34ms</td>
+</tr>
+<tr>
+  <td>kissy-mini</td>
+  <td>31k</td>
+  <td>50ms</td>
+  <td>27ms</td>
+</tr>
+<tr>
+  <td>kissy-seed</td>
+  <td>44k</td>
+  <td>81ms</td>
+  <td>57ms</td>
+</tr>
+</table>
+
 
 
 ## include
@@ -206,14 +260,14 @@ jquery v2.1.4
 
 - 提供3个版本
 
-  + mini.js(8k，最新版25k)
+  + mini.js(8k，最新版31k)
 
   + mini-full.js(13k，最新版39k)
 
   + mini-all.js(34k)
 
 
-- 手机端wifi下30次加载&执行时间
+- 以mini.js为例，手机端wifi下30次加载&执行时间
   
   + 首次耗时 50ms
 
@@ -279,6 +333,42 @@ jquery v2.1.4
   <td>85k</td>
   <td>111ms</td>
   <td>71ms</td>
+</tr>
+<tr>
+  <td>jquery-build</td>
+  <td>50k</td>
+  <td>79ms</td>
+  <td>55ms</td>
+</tr>
+<tr>
+  <td>zepto</td>
+  <td>24k</td>
+  <td>97ms</td>
+  <td>38ms</td>
+</tr>
+<tr>
+  <td>jquip</td>
+  <td>32k</td>
+  <td>69ms</td>
+  <td>35ms</td>
+</tr>
+<tr>
+  <td>sprint</td>
+  <td>17k</td>
+  <td>41ms</td>
+  <td>34ms</td>
+</tr>
+<tr>
+  <td>kissy-mini</td>
+  <td>31k</td>
+  <td>50ms</td>
+  <td>27ms</td>
+</tr>
+<tr>
+  <td>kissy-seed</td>
+  <td>44k</td>
+  <td>81ms</td>
+  <td>57ms</td>
 </tr>
 </table>
 
