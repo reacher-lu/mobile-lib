@@ -190,7 +190,7 @@ jquery v2.1.4
 
 - 下图为网摘的整个kissy框架的结构，值得学习
 
-<img src="images/zepto.diy.png" width="433" height="330" />
+<img src="images/kissy.png" width="433" height="330" />
 
 
 
