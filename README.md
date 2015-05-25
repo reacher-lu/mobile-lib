@@ -29,9 +29,12 @@
 
 ## detail
 
-- 运行 python -m SimpleHTTPServer 
+- 运行 python -m SimpleHTTPServer 起一个本地服务，手机访问该页面，页面将自动刷新10次，计算出脚本加载与执行的平均值。
 
-### jquery
+- 修改time.js的阈值以及setTimeout时间，可进行更多次加载，取的更精确的结果
+
+
+#### jquery
 
 jquery v2.1.4
 
@@ -40,7 +43,14 @@ jquery v2.1.4
 - 手机端执行时间约为100~500ms,最高出现过1.3s
 
 
-### jquery-build
+
+
+***
+
+
+
+
+#### jquery-build
 
 - 在gruntfile中增加要删除的模块，进入到目录执行grunt，文件会自动打包到lib文件夹，可使用 jquery-build.html 调试&查看效果
 
@@ -71,7 +81,12 @@ jquery v2.1.4
 
 
 
-### zepto
+***
+
+
+
+
+#### zepto
 
 - github [https://github.com/madrobby/zepto](https://github.com/madrobby/zepto)
 
@@ -103,8 +118,11 @@ jquery v2.1.4
 
 
 
+***
 
-### jquip
+
+
+#### jquip
 
 - github [https://github.com/mythz/jquip](https://github.com/mythz/jquip)
 
@@ -128,8 +146,11 @@ jquery v2.1.4
 
 
 
+***
 
-### sprint
+
+
+#### sprint
 
 - github [https://github.com/bendc/sprint](https://github.com/bendc/sprint)
 
@@ -141,9 +162,12 @@ jquery v2.1.4
 
 
 
+***
 
 
-### kissy mini
+
+
+#### kissy mini
 
 - github上搜到的是kissy mobile，不过官网打不开了，不知道是啥玩意儿，pass。找到一个替代的kissy mini  
 
@@ -162,9 +186,10 @@ jquery v2.1.4
 - 以mini-min为例，本地执行时间6-7ms
 
 
+***
 
 
-### kissy seed
+#### kissy seed
 
 - github [https://github.com/kissyteam/kissy](https://github.com/kissyteam/kissy)
 
