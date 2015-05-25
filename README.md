@@ -29,10 +29,15 @@
 
 ## detail
 
+- 运行 python -m SimpleHTTPServer 
+
 ### jquery
 
 jquery v2.1.4
 
+- 本地执行时间约为44-70ms
+
+- 手机端执行时间约为100~500ms,最高出现过1.3s
 
 
 ### jquery-build
@@ -58,6 +63,10 @@ jquery v2.1.4
   + `Offset`
 
 - 移除任何一个模块，这个模块里面对应的所有方法将不再可用
+
+- 本地执行时间约为24-30ms
+
+- 手机端执行时间约为100~500ms,最高出现过1.3s
 
 
 
@@ -115,6 +124,9 @@ jquery v2.1.4
 
 - 以上几个模块压缩版为32k
 
+- 本地执行时间约为10-15ms
+
+
 
 
 ### sprint
@@ -125,22 +137,30 @@ jquery v2.1.4
 
 - 官网提供的完整压缩版为17k
 
+- 本地执行时间约为5~8ms
+
+
 
 
 
 ### kissy mini
 
-- github上搜到的是kissy mobile，不过官网打不开了，不知道是啥玩意儿，pass。找到一个替代的kissy mini  官网戳[这里](http://m.kissyui.com/)
+- github上搜到的是kissy mobile，不过官网打不开了，不知道是啥玩意儿，pass。找到一个替代的kissy mini  
 
-- kissy mini 好像没有在github上托管
+- 官网戳[这里](http://m.kissyui.com/)
+
+- kissy mini 好像没有在github上托管，放在他们自己的[gitlab](http://gitlab.alibaba-inc.com/kissy/m)上，但是这个gitlab是打不开的
 
 - 提供3个版本
 
-  + mini.js(8k)
+  + mini.js(8k，最新版25k)
 
-  + mini-full.js(13k)
+  + mini-full.js(13k，最新版39k)
 
   + mini-all.js(34k)
+
+- 以mini-min为例，本地执行时间6-7ms
+
 
 
 
@@ -148,7 +168,30 @@ jquery v2.1.4
 
 - github [https://github.com/kissyteam/kissy](https://github.com/kissyteam/kissy)
 
-- API [http://docs.kissyui.com](http://docs.kissyui.com)
+- API [http://docs.kissyui.com/1.4/docs/html/api/](http://docs.kissyui.com/1.4/docs/html/api/)
+
+- seed是kissy的加载器，可以点击API查看，包含4个部分
+
+  + lang——一个类似于underscore的工具库
+
+  + features——环境检测，对H5的新API，css3动画的支持，有点类似于modernizr
+
+  + loader——提供一个模块化开发的API
+
+  + ua——顾名思义，useragent，可判断浏览器内核，手机型号等等
+
+- 如果需要其他，比如操作dom，还得另行添加模块，可在bower.json里的dependencies中添加对应模块，执行bower install && node build，打包出自定义的seed.js
+
+- 也可以自己定义模块，kissy提供了一个[KMD模块定义规范](http://docs.kissyui.com/1.4/docs/html/guideline/kmd.html)，根据规范定义自己的模块
+
+- kissy也提供一个基于NodeJS的模块打包工具，点[这里](https://github.com/daxingplay/kmc)查看
+
+- 目前单就kissy seed本身，代码量为44k;
+
+- 下图为网摘的整个kissy框架的结构，值得学习
+
+<img src="images/zepto.diy.png" width="433" height="330" />
+
 
 
 
@@ -156,6 +199,8 @@ jquery v2.1.4
 ## 小结
 
 1. 因为项目目前主要是重构，考虑到重构工作量以及jquery与kissy语法上的区别，还是用jquery系的类库替换jquery比较方便
+
+1. 
 
 1. 分析几个大型类库的API，虽然支持模块分解，但每个模块里面都有大量我们不会用到的代码，后期要将代码缩减到极致，最好的办法还是我们手动去写，网上也有很多实现的文章，如：
 

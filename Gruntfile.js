@@ -44,6 +44,13 @@ module.exports = function (grunt) {
           'lib/time.js'
         ],
         dest: 'lib/sprint.min.js'
+      },
+      mini: {
+        src: [
+          'lib/mini-min.js',
+          'lib/time.js'
+        ],
+        dest: 'lib/mini-min.js'
       }
     }
   });

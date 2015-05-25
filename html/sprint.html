@@ -6,17 +6,19 @@
 </head>
 
 <body>
+<button id="clear">清空localstorage</button>
 
 <script>
 window.timing = +new Date();
 </script>
 <script src="../lib/sprint.min.js"></script>
 <script>
+  (function(){
     $(document).ready(function(){
-        console.log(jQuery);
         console.log($);
         console.log($.ajax);
     });
+  })(Sprint);
 </script>
 </body>
 </html>
